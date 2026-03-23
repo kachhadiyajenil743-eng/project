@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cartoon Robot Project</title>
+    <style>
+        /* CSS Styling Starts Here */
+        body {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .robot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Robot ka Sarr */
+        .head {
+            width: 150px;
+            height: 120px;
+            background-color: #bdc3c7;
+            border: 4px solid #34495e;
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        /* Aankhen aur Animation */
+        .eye {
+            width: 30px;
+            height: 30px;
+            background-color: #3498db;
+            border-radius: 50%;
+            border: 3px solid #2c3e50;
+            animation: blink 3s infinite;
+        }
+
+        @keyframes blink {
+            0%, 90%, 100% { transform: scaleY(1); }
+            95% { transform: scaleY(0.1); }
+        }
+
+        /* Robot ka Muh */
+        .mouth {
+            width: 60px;
+            height: 10px;
+            background-color: #e74c3c;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Robot ki Antenna */
+        .antenna {
+            width: 10px;
+            height: 30px;
+            background-color: #34495e;
+            position: absolute;
+            top: -34px;
+            left: 70px;
+        }
+
+        .antenna::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            left: -5px;
+        }
+
+        /* Robot ki Body */
+        .body {
+            width: 180px;
+            height: 150px;
+            background-color: #95a5a6;
+            border: 4px solid #34495e;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chest-plate {
+            width: 100px;
+            height: 60px;
+            background-color: #7f8c8d;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 10px;
+        }
+
+        /* Buttons on chest */
+        .btn {
+            width: 15px;
+            height: 15px;
+            background-color: #f1c40f;
+            border-radius: 50%;
+        }
+
+        /* Haath (Arms) */
+        .arms-container {
+            display: flex;
+            justify-content: space-between;
+            width: 260px;
+            position: absolute;
+            top: 150px;
+        }
+
+        .arm {
+            width: 30px;
+            height: 80px;
+            background-color: #bdc3c7;
+            border: 4px solid #34495e;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Arial', sans-serif;
+            position: absolute;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mera Robot Project</h1>
+
+    <div class="robot">
+        <div class="head">
+            <div class="antenna"></div>
+            <div class="eye"></div>
+            <div class="eye"></div>
+            <div class="mouth"></div>
+        </div>
+        
+        <div class="arms-container">
+            <div class="arm"></div>
+            <div class="arm"></div>
+        </div>
+
+        <div class="body">
+            <div class="chest-plate">
+                <div class="btn"></div>
+                <div class="btn" style="background-color: #2ecc71;"></div>
+                <div class="btn"></div>
+                <div class="btn" style="background-color: #e67e22;"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
